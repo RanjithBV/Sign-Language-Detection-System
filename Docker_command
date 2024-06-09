@@ -1,0 +1,13 @@
+1)Command to run the image docker for tensorflow with gpu is as follows:
+sudo docker run -it --rm -p 8888:8888 --gpus all tensorflow/tensorflow:latest-gpu-jupyter
+
+2) Command to run the image docker for tensorflow with gpu with local system file access is as follows we just use the -v flag for it and the command is as follows:
+sudo docker run -it --rm -p 8888:8888 --gpus all -v /home/saikalyansathish/Desktop:/home/jovyan/Desktop tensorflow/tensorflow:latest-gpu-jupyter
+
+3) To start the tensorflow and gpu docker container the following command is as follows:
+sudo docker run --gpus all -it -v /home/saikalyansathish/Desktop:/workspace -p 8888:8888 tensorflow/tensorflow:latest-gpu bash
+sudo docker run --gpus all -it -v /home/saikalyansathish/Desktop:/workspace -p 8888:8888 tensorflow/tensorflow:latest-gpu bash
+
+
+4) To start jupyter notebook we have the following command:
+jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
